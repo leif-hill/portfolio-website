@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import Header from '../components/header';
+import HeaderMobile from '../components/headermobile';
 import LandingBG from '../components/landingbg';
 import Footer from '../components/footer';
 import LandingHeader from '../components/landingheader';
+import LandingHeaderMobile from '../components/landingheadermobile';
 import Placeholder from '@/components/placeholder';
 import Landing from '@/components/landing';
 import Placeholder1 from '@/components/placeholder1';
@@ -39,8 +41,8 @@ const Home = () => {
   if (isMobileDevice) {
     return (
       <>
-        <LandingHeader />
-        <Header show={showHeader} />
+        <LandingHeaderMobile />
+        <HeaderMobile show={showHeader} />
         <Landing />
         <LandingBG />
         <Placeholder1 />

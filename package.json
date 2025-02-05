@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "dev": "next dev",
     "deploy": "npm run build && gh-pages -d out"
   },
   "dependencies": {
