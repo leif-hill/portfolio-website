@@ -53,7 +53,7 @@ const LandingMobile = () => {
           onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#b7d5e8')}
           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'white')}
         >
-          Portfolio
+          Projects
         </button>
         <button
           onClick={openResume}
