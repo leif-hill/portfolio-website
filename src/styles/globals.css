@@ -2,20 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.fade-in, .fade-in1, .fade-in2 {
+  opacity: 0; /* Ensure initial opacity is 0 */
 }
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+.fade-in1 {
+  animation: fadeIn 0.8s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+.fade-in2 {
+  animation: fadeIn 0.8s ease-in-out forwards;
+  animation-delay: 1s;
+}
+:root {
+  --background: #C4C6D5;
+  --header: #33333F;
+  --foreground: #000000;
+  --transition-duration: 0.3s; /* Add this if it's missing */
+}
+
+[data-theme="dark"] {
+  --background: #33333F;
+  --header: #6757A2;
+  --foreground: #FFFFFF; /* Add this if it's missing */
+}
+
+body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root, #__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+.main-header {
+  position: fixed;
+  top: -100px; /* Start off-screen */
+  left: 0;
+  width: 100%;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Ensure both top and background-color transitions */
+  z-index: 9999; /* Ensure the header is on top of other elements */
+}
+
+.main-header.show {
+  top: 0; /* Slide down into view */
+}
+
+.main-footer {
+  position: fixed;
+  bottom: -100px; /* Start off-screen */
+  left: 0;
+  width: 100%;
+  transition: bottom 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Ensure both bottom and background-color transitions */
+  z-index: 9999; /* Ensure the footer is on top of other elements */
+}
+
+.main-footer.show {
+  bottom: 0; /* Slide up into view */
+}
+
