@@ -28,13 +28,13 @@ const HeaderMobile = ({ show }: HeaderProps) => {
         <a href="#" onClick={navigateToHome}>
           <h1
             className={`${zen.className} bg-white p-0 px-3 inline-block`}
-            style={{ letterSpacing: '0.2em', color: 'var(--header)', transition: 'color var(--transition-duration)', borderRadius: '3px', fontSize: '1rem', textAlign: 'center' }}
+            style={{ letterSpacing: '0.2em', color: 'var(--header)', transition: 'color var(--transition-duration)', borderRadius: '3px', fontSize: '0.6rem', textAlign: 'center' }}
           >
             LEIF HILL
           </h1>
           <h1
             className={`${zen.className} p-1 inline-block`}
-            style={{ letterSpacing: '0.1em', color: 'white', fontSize: '1rem', textAlign: 'center' }}
+            style={{ letterSpacing: '0.1em', color: 'white', fontSize: '0.6rem', textAlign: 'center' }}
           >
             software engineer
           </h1>
@@ -46,7 +46,7 @@ const HeaderMobile = ({ show }: HeaderProps) => {
             <img
               src={isDarkMode ? '/moon.svg' : '/sun.svg'}
               alt="Toggle theme"
-              style={{ width: '16px', height: '16px' }}
+              style={{ width: '10px', height: '10px' }}
             />
           </button>
         </div>
