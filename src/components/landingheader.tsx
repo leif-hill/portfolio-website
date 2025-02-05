@@ -9,7 +9,7 @@ function LandingHeader() {
   }, []);
 
   return (
-    <header id="landing-header" style={{ backgroundColor: '#6757A2', zIndex: 0 }} className="flex justify-between items-center p-4 transition-colors duration-300 relative header-blur">
+    <header id="landing-header" style={{ backgroundColor: 'transparent', zIndex: 0 }} className="flex justify-between items-center p-4 transition-colors duration-300 relative header-blur">
       <div className="flex items-center">
         <a href="#">
           <h1 className={`${zen.className} bg-white p-0 px-3 ml-5 inline-block ${isLoaded ? 'fade-in' : ''}`} style={{ letterSpacing: '0.2em', color: '#6757A2', borderRadius: '3px', fontSize: '1.35rem'}}>
