@@ -30,13 +30,24 @@
   --background: #C4C6D5;
   --header: #33333F;
   --foreground: #000000;
+  --button-bg: #4a4a4a; /* Gray for light mode */
+  --button-hover-bg: #5a5a5a; /* Darker gray for light mode */
+  --button-text: #ffffff;
+  --tag-bg: #7c7c7c; /* Darker gray for dark mode */
+  --tag-text: #ffffff;
   --transition-duration: 0.3s; /* Add this if it's missing */
 }
 
 [data-theme="dark"] {
   --background: #33333F;
   --header: #6757A2;
-  --foreground: #FFFFFF; /* Add this if it's missing */
+  --foreground: #FFFFFF;
+  --button-bg: #ffffff; /* White for dark mode */
+  --button-hover-bg: #e0e0e0; /* Lighter gray for dark mode */
+  --button-text: #000000;
+  --tag-bg: #dedede; /* Lighter gray for light mode */
+  --tag-text: #000000;
+  --transition-duration: 0.3s;
 }
 
 body {
@@ -88,3 +99,87 @@ main {
   bottom: 0; /* Slide up into view */
 }
 
+.button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: background-color var(--transition-duration);
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--button-bg);
+  transition: 0.4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--button-text);
+  padding: 0 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--button-text);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--button-hover-bg);
+}
+
+input:checked + .slider:before {
+  transform: translateX(46px);
+}
+
+.slider-text-left {
+  position: absolute;
+  left: 20px; /* Adjusted to move CS to the right */
+  pointer-events: none;
+}
+
+.slider-text-right {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+}
