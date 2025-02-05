@@ -5,9 +5,10 @@ import LandingBG from '../components/landingbg';
 import Footer from '../components/footer';
 import LandingHeader from '../components/landingheader';
 import LandingHeaderMobile from '../components/landingheadermobile';
-import Placeholder from '@/components/placeholder';
-import Landing from '@/components/landing';
-import Placeholder1 from '@/components/placeholder1';
+import Placeholder from '../components/placeholder';
+import Landing from '../components/landing';
+import LandingMobile from '../components/landingmobile';
+import Placeholder1 from '../components/placeholder1';
 
 const isMobile = () => {
   if (typeof window !== 'undefined') {
@@ -43,7 +44,7 @@ const Home = () => {
       <>
         <LandingHeaderMobile />
         <HeaderMobile show={showHeader} />
-        <Landing />
+        <LandingMobile />
         <LandingBG />
         <Placeholder1 />
         <Footer />
