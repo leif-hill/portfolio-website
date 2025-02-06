@@ -1,11 +1,11 @@
 import MyBetes from "./projects/mybetes";
-import MyBetesAlt from "./projects/mybetesalt";
+import StudyTracker from "./projects/studytracker";
 
 function CSProjects() {
     return (
         <div className="flex flex-wrap justify-center">
             <MyBetes />
-            <MyBetesAlt />
+            <StudyTracker />
       </div>
     );
 }

@@ -1,6 +1,6 @@
 import { kanit } from '../../pages/_app';
 
-const MyBetes = () => {
+const TriviaNight = () => {
   return (
     <div className="flex justify-center">
       <div
@@ -10,41 +10,49 @@ const MyBetes = () => {
         <div className="w-full md:w-1/2 flex items-center justify-center" style={{ backgroundColor: 'var(--header)', padding: '0.3rem' }}>
           <img
             className="object-contain w-full h-auto md:w-auto md:h-full"
-            src="/mybetes.gif"
+            src="/trivianight.jpg"
             alt="MyBetes"
           />
         </div>
         <div className="w-full md:w-1/2 px-4 py-2 md:px-6 md:py-4 flex flex-col justify-center" style={{ backgroundColor: 'var(--background)', paddingTop: '1rem' }}>
           <div className="flex flex-col justify-center flex-1">
             <div className={`${kanit.className} font-bold text-sm md:text-2xl mb-2`} style={{ color: 'var(--foreground)' }}>
-              MyBetes
+              Atrioc Trivia Night Multimedia Project
             </div>
             <p className={`${kanit.className} text-xs md:text-sm`} style={{ color: 'var(--foreground)' }}>
-              An AI-powered meal management tool that uses computer vision to analyze food photos, estimate glycemic index, and provide personalized advice for diabetics.
+              Developed and managed a trivia night segment for Twitch streamer{' '}
+              <a
+                href="https://www.youtube.com/@atrioc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-gray-800"  // Added styling for the link
+              >
+                Atrioc
+              </a>
+              , including video editing, graphic design, and a custom backend for question management.
             </p>
             <div className="pt-4">
               <a
-                href="https://devpost.com/software/mybetes"
+                href="https://www.youtube.com/playlist?list=PLrFyReeHmOZSKbxs1yHFtBLMtuYYSA0rF"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button inline-flex items-center font-bold py-2 px-4 rounded"
               >
                 View Project
                 <img
-                  src="/devpost.svg"
-                  alt="Devpost Icon"
-                  className="ml-2 w-4 h-4 devpost-icon"
+                  src="/youtube.svg"
+                  alt="YouTube Icon"
+                  className="ml-2 w-4 h-4 youtube-icon"
                 />
               </a>
             </div>
           </div>
           <div className="pt-4 flex flex-wrap">
-            <span className="tag">Hackathon Winner 🏆</span>
-            <span className="tag">AI/ML</span>
-            <span className="tag">Next.js</span>
-            <span className="tag">Node.js</span>
-            <span className="tag">Tailwind</span>
-            <span className="tag">Vercel</span>
+            <span className="tag">Professional Work</span>
+            <span className="tag">DaVinci Resolve</span>
+            <span className="tag">Photoshop</span>
+            <span className="tag">Excel/Sheets</span>
+            <span className="tag">Google Apps Script</span>
           </div>
         </div>
       </div>
@@ -52,4 +60,4 @@ const MyBetes = () => {
   );
 };
 
-export default MyBetes;
+export default TriviaNight;

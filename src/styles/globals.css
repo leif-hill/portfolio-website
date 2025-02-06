@@ -50,6 +50,30 @@
   --transition-duration: 0.3s;
 }
 
+[data-theme="dark"] .devpost-icon {
+  filter: none;
+}
+
+[data-theme]:not([data-theme="dark"]) .devpost-icon {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .github-icon {
+  filter: none;
+}
+
+[data-theme]:not([data-theme="dark"]) .github-icon {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .youtube-icon {
+  filter: none;
+}
+
+[data-theme]:not([data-theme="dark"]) .youtube-icon {
+  filter: invert(1);
+}
+
 body {
   background-color: var(--background) !important;
   color: var(--foreground) !important;

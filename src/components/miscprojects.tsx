@@ -1,11 +1,9 @@
-import MyBetes from "./projects/mybetes";
-import MyBetesAlt from "./projects/mybetesalt";
+import TriviaNight from "./projects/trivianight";
 
 function MiscProjects() {
     return (
         <div className="flex flex-wrap justify-center">
-            <MyBetesAlt />
-            <MyBetes />
+            <TriviaNight />
       </div>
     );
 }

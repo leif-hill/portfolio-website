@@ -1,6 +1,6 @@
 import { kanit } from '../../pages/_app';
 
-const MyBetesAlt = () => {
+const StudyTracker = () => {
   return (
     <div className="flex justify-center">
       <div
@@ -30,9 +30,14 @@ const MyBetesAlt = () => {
                 href="https://github.com/leif-hill/study-tracker"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button inline-block font-bold py-2 px-4 rounded"
+                className="button inline-flex items-center font-bold py-2 px-4 rounded"
               >
                 View Project
+                <img
+                  src="/github.svg"
+                  alt="GitHub Icon"
+                  className="ml-2 w-4 h-4 github-icon"
+                />
               </a>
             </div>
           </div>
@@ -59,4 +64,4 @@ const MyBetesAlt = () => {
   );
 };
 
-export default MyBetesAlt;
+export default StudyTracker;
