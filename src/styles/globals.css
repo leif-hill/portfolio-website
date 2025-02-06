@@ -74,6 +74,23 @@
   filter: invert(1);
 }
 
+/* If data-theme is not set or is light, invert the icons so they appear white */
+:root:not([data-theme]) .devpost-icon,
+:root:not([data-theme]) .github-icon,
+:root:not([data-theme]) .youtube-icon,
+[data-theme]:not([data-theme="dark"]) .devpost-icon,
+[data-theme]:not([data-theme="dark"]) .github-icon,
+[data-theme]:not([data-theme="dark"]) .youtube-icon {
+  filter: invert(1);
+}
+
+/* When dark mode is active, remove inversion so icons remain black */
+[data-theme="dark"] .devpost-icon,
+[data-theme="dark"] .github-icon,
+[data-theme="dark"] .youtube-icon {
+  filter: none;
+}
+
 body {
   background-color: var(--background) !important;
   color: var(--foreground) !important;
