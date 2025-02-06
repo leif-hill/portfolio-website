@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from '../components/header';
 import HeaderMobile from '../components/headermobile';
 import LandingBG from '../components/landingbg';
+import LandingBGMobile from '@/components/landingbgmobile';
 import Footer from '../components/footer';
 import LandingHeader from '../components/landingheader';
 import LandingHeaderMobile from '../components/landingheadermobile';
@@ -45,7 +46,7 @@ const Home = () => {
         <LandingHeaderMobile />
         <HeaderMobile show={showHeader} />
         <LandingMobile />
-        <LandingBG />
+        <LandingBGMobile />
         <Placeholder1 />
         <Footer />
       </>

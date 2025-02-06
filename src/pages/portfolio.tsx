@@ -3,6 +3,7 @@ import Header from '../components/header';
 import HeaderMobile from '../components/headermobile';
 import Footer from '../components/footer';
 import PortfolioPage from '../components/portfoliopage';
+import PortfolioPageMobile from '@/components/portfoliopagemobile';
 
 const isMobile = () => {
   if (typeof window !== 'undefined') {
@@ -22,7 +23,7 @@ const Portfolio = () => {
     return (
       <>
         <HeaderMobile show={true} />
-        <PortfolioPage />
+        <PortfolioPageMobile />
         <Footer />
       </>
     );
