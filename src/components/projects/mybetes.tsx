@@ -34,7 +34,7 @@ const MyBetes = () => {
             </div>
           </div>
           <div className="pt-4 flex flex-wrap">
-            <span className="tag">Hackathon Winner🏆</span>
+            <span className="tag">Hackathon Winner 🏆</span>
             <span className="tag">AI/ML</span>
             <span className="tag">Next.js</span>
             <span className="tag">Node.js</span>

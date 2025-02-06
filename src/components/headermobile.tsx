@@ -32,12 +32,6 @@ const HeaderMobile = ({ show }: HeaderProps) => {
           >
             LEIF HILL
           </h1>
-          <h1
-            className={`${zen.className} p-1 inline-block`}
-            style={{ letterSpacing: '0.1em', color: 'white', fontSize: '0.8rem', textAlign: 'center' }}
-          >
-            software engineer
-          </h1>
         </a>
       </div>
       <div className="flex items-center justify-end flex-1">
